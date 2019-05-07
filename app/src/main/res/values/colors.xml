@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="colorPrimary">#6200EE</color>
+	<color name="colorPrimaryDark">#3700B3</color>
+	<color name="colorAccent">#D81B60</color>
+	<color name="tabText">#E4A1FF</color>
+	<color name="tabTextSelected">#FFFFFF</color>
+	<color name="tabIndicator">#E4A1FF</color>
+	<color name="checked">#BB86FC</color>
+	<color name="grayText">#999999</color>
+	<color name="btnOrange">#FC5830</color>
+	<color name="blue">#0000FF</color>
+	<color name="green">#008000</color>
+	<color name="purple">#800080</color>
+	<color name="red">#800080</color>
+	<color name="silver">#C0C0C0</color>
+	<color name="turquoise">#40E0D0</color>
+	<color name="yellow">#FFFF00</color>
+</resources>

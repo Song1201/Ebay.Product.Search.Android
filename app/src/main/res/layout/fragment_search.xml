@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".Search">
+
+
+	<TextView
+		android:id="@+id/keywordLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:letterSpacing="0.1"
+		android:text="Keyword"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<android.support.design.widget.TextInputLayout
+		android:id="@+id/keywordInputLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="0dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/keywordLabel"
+		app:hintEnabled="false">
+
+		<android.support.design.widget.TextInputEditText
+			android:id="@+id/keywordInput"
+			android:layout_width="345dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="0dp"
+			android:layout_marginTop="0dp"
+			android:backgroundTint="@color/grayText"
+			android:ems="10"
+			android:hint="Enter Keyword"
+			android:inputType="textNoSuggestions"/>
+
+	</android.support.design.widget.TextInputLayout>
+
+
+	<TextView
+		android:id="@+id/categoryLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:letterSpacing="0.1"
+		android:text="Category"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/keywordInputLayout" />
+
+	<Spinner
+		android:id="@+id/categoryInput"
+		android:layout_width="360dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/categoryLabel" />
+
+	<TextView
+		android:id="@+id/conditionLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="0dp"
+		android:letterSpacing="0.1"
+		android:text="Condition"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/categoryInput" />
+
+	<CheckBox
+		android:id="@+id/New"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:text="New"
+		android:textSize="16dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/conditionLabel" />
+
+	<CheckBox
+		android:id="@+id/Used"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:text="Used"
+		android:textSize="16dp"
+		app:layout_constraintStart_toEndOf="@+id/New"
+		app:layout_constraintTop_toBottomOf="@+id/conditionLabel" />
+
+	<CheckBox
+		android:id="@+id/Unspecified"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:text="Unspecified"
+		android:textSize="16dp"
+		app:layout_constraintStart_toEndOf="@+id/Used"
+		app:layout_constraintTop_toBottomOf="@+id/conditionLabel" />
+
+	<TextView
+		android:id="@+id/shipLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:letterSpacing="0.1"
+		android:text="Shipping Options"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/New" />
+
+	<CheckBox
+		android:id="@+id/local"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:text="Local Pickup"
+		android:textSize="16dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/shipLabel" />
+
+	<CheckBox
+		android:id="@+id/freeShip"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:text="Free Shipping"
+		android:textSize="16dp"
+		app:layout_constraintStart_toEndOf="@+id/local"
+		app:layout_constraintTop_toBottomOf="@+id/shipLabel" />
+
+	<TextView
+		android:id="@+id/nearbyLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:letterSpacing="0.1"
+		android:text="Enable Nearby Search"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/local" />
+
+	<CheckBox
+		android:id="@+id/nearbyCheckbox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		app:layout_constraintBaseline_toBaselineOf="@+id/nearbyLabel"
+		app:layout_constraintStart_toEndOf="@+id/nearbyLabel" />
+
+
+	<EditText
+		android:id="@+id/distanceInput"
+		android:layout_width="345dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:ems="10"
+		android:hint="Miles From"
+		android:inputType="number"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/nearbyLabel" />
+
+	<TextView
+		android:id="@+id/clientLocLabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="8dp"
+		android:text="From"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/distanceInput" />
+
+	<android.support.design.widget.TextInputLayout
+		android:id="@+id/zipInputLayout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="0dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/clientLocLabel"
+		app:hintEnabled="false">
+
+		<RelativeLayout
+			android:id="@+id/clientLocSelections"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="parent">
+
+			<RadioGroup
+				android:id="@+id/clientLocOption"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_marginStart="0dp"
+				app:layout_constraintStart_toStartOf="parent">
+
+
+				<RadioButton
+					android:id="@+id/currLoc"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Current Location"
+					android:checked="true"/>
+
+				<RadioButton
+					android:id="@+id/clientZip"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RadioGroup>
+
+
+			<AutoCompleteTextView
+				android:id="@+id/clientZipInput"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:layout_alignBottom="@+id/clientLocOption"
+				android:layout_marginLeft="30dp"
+				android:ems="10"
+				android:hint="zipcode"
+				android:inputType="number"
+				android:enabled="false"/>
+
+		</RelativeLayout>
+	</android.support.design.widget.TextInputLayout>
+
+
+	<Button
+		android:id="@+id/searchBtn"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="24dp"
+		android:layout_marginTop="16dp"
+		android:backgroundTint="@color/btnOrange"
+		android:text="Search"
+		android:textColor="#ffffff"
+		android:height="60dp"
+		app:layout_constraintEnd_toStartOf="@+id/clearBtn"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/zipInputLayout" />
+
+	<Button
+		android:id="@+id/clearBtn"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginEnd="24dp"
+		android:backgroundTint="@color/btnOrange"
+		android:text="Clear"
+		android:textColor="#ffffff"
+		android:height="60dp"
+		app:layout_constraintBaseline_toBaselineOf="@+id/searchBtn"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toEndOf="@+id/searchBtn" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
